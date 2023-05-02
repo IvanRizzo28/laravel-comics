@@ -1,0 +1,86 @@
+@import "~bootstrap/scss/bootstrap";
+
+
+@mixin conteainer-Flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section{
+    padding: 40px 0;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+//header
+header{
+    padding: 20px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    @include conteainer-Flex;
+}
+
+header img{
+    width: 80px;
+}
+
+//menu
+nav ul{
+    list-style: none;
+    display: flex;
+
+    li{
+      a{
+        display: inline-block;
+        padding: 15px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #000;
+      }  
+    }
+}
+
+//footer
+
+footer{
+    background-color: #303030;
+    .jumbo{
+        background-image: url("../img/footer-bg.jpg");
+        background-size: cover;
+    }
+    .container{
+        padding: 20px 0;
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        @include conteainer-Flex;
+        overflow: hidden;
+        img{
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.menu{
+    display: flex;
+    div{
+        padding: 0 20px;
+        h2{
+            color: #fff;
+            margin: 20px 0;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            color: rgb(173, 173, 173);
+            margin-bottom: 10px;
+            display: block;
+        }
+    }
+}
