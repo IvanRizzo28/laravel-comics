@@ -14,5 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+
+    $dati=[
+        "data" => config("db")
+    ];
+     
+    return view('home',$dati);
+});
+
+Route::get('/single/{id}', function ($id) {
+
+    $data=config("db")[$id];
+     
+    return view('single',compact("data"));
 });
