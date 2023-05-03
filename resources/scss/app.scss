@@ -1,63 +1,152 @@
-@import "~bootstrap/scss/bootstrap";
-
-
-@mixin conteainer-Flex{
+/*
+reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@mixin conteainer-Flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-section{
-    padding: 40px 0;
-  }
 
-  a{
+section {
+    padding: 40px 0;
+}
+
+a {
     text-decoration: none;
-  }
+}
 
 //header
-header{
+header {
     padding: 20px 0;
     max-width: 1200px;
     margin: 0 auto;
     @include conteainer-Flex;
 }
 
-header img{
+header img {
     width: 80px;
 }
 
 //menu
-nav ul{
+nav ul {
     list-style: none;
     display: flex;
 
-    li{
-      a{
-        display: inline-block;
-        padding: 15px;
-        text-decoration: none;
-        text-transform: uppercase;
-        color: #000;
-      }  
+    li {
+        a {
+            display: inline-block;
+            padding: 15px;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #000;
+        }
     }
 }
 
+//main
+
+.j-bg {
+    background-image: url("../img/jumbotron.jpg");
+    background-size: cover;
+    height: 300px;
+    padding: 0;
+}
+
+//----------
+.content {
+    background-color: #000;
+    color: #fff;
+
+    h2{
+        position: absolute;
+        padding: 10px 20px;
+        background-color: #3050D9;
+        top: -60px;
+        left: 0;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    .card {
+        width: calc(100% / 6);
+        padding: 20px;
+        .foto{
+            width: 100%;
+            margin-bottom: 5px;
+            img{
+                max-width: 100%;
+                aspect-ratio: 1/1;
+                object-fit: cover;
+            }
+        }
+        span{
+            text-transform: uppercase;
+    
+        }
+    }
+
+    .button{
+        max-width: 200px;
+        margin: 0 auto;
+        padding-top: 20px;
+    }
+    a{
+        background-color: #3050D9;
+        padding: 10px 40px;
+        color: #fff;
+    }
+
+}
+
+.service{
+    background-color: #3050D9;
+    .container{
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+        div{
+            display: flex;
+            align-items: center;
+            img{
+                width: 60px;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+
 //footer
 
-footer{
+footer {
     background-color: #303030;
-    .jumbo{
+
+    .jumbo {
         background-image: url("../img/footer-bg.jpg");
         background-size: cover;
     }
-    .container{
+
+    .container {
         padding: 20px 0;
         max-width: 1200px;
         margin: 0 auto;
         position: relative;
         @include conteainer-Flex;
         overflow: hidden;
-        img{
+
+        img.absolute{
             position: absolute;
             right: 0;
             top: 50%;
@@ -66,21 +155,49 @@ footer{
     }
 }
 
-.menu{
+.menu {
     display: flex;
-    div{
+
+    div {
         padding: 0 20px;
-        h2{
+
+        h2 {
             color: #fff;
             margin: 20px 0;
         }
-        ul{
+
+        ul {
             list-style: none;
         }
-        a{
+
+        a {
             color: rgb(173, 173, 173);
             margin-bottom: 10px;
             display: block;
+        }
+    }
+}
+
+.icone {
+    a {
+        color: #fff;
+        padding: 10px 20px;
+        border: 1px solid #3050D9;
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+
+        &>* {
+            margin-left: 10px
+        }
+
+        span {
+            margin-right: 10px;
+            font-weight: bold;
+            font-size: 18px;
+            color: #3050D9;
         }
     }
 }

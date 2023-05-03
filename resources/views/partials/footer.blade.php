@@ -42,18 +42,18 @@
                     </ul>
                 </div>
             </div>
-            <img src="/dc-logo-bg.png" alt="">
+            <img class="absolute" src="{{ Vite::asset('resources/img/dc-logo-bg.png') }}" alt="">
         </div>
     </div>
-    <div class="container">
+    <div class="container icone">
         <a href="#" class="btn">SIGN-UP NOW</a>
         <div>
             <span>FOLLOW US</span>
             <img src="{{ Vite::asset('resources/img/footer-facebook.png') }}" alt="">
             <img src="{{ Vite::asset('resources/img/footer-youtube.png') }}" alt="">
+            <img src="{{ Vite::asset('resources/img/footer-pinterest.png') }}" alt="">
             <img src="{{ Vite::asset('resources/img/footer-periscope.png') }}" alt="">
             <img src="{{ Vite::asset('resources/img/footer-twitter.png') }}" alt="">
-            <img src="{{ Vite::asset('resources/img/footer-pinterest.png') }}" alt="">
         </div>
     </div>
 </footer>
